@@ -1,0 +1,5 @@
+package br.com.carv.book.proxy;
+
+public interface CambioProxy {
+
+}

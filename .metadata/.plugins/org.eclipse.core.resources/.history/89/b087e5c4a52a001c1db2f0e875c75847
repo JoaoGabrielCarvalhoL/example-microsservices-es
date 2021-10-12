@@ -1,0 +1,5 @@
+package br.com.carv.gateway.configuration;
+
+public class ApiGatewayConfiguration {
+
+}

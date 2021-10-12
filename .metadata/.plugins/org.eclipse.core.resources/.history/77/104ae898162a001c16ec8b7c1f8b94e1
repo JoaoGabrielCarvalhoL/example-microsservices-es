@@ -1,0 +1,52 @@
+package br.com.carv.book.model;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Transient;
+
+@Entity
+public class Book {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id; 
+	
+	@Column(nullable = false, length = 30)
+	private String author; 
+	
+	private Date launchDate; 
+	
+	@Column(nullable = false)
+	private Double price; 
+	
+	@Column(nullable = false)
+	private String title; 
+	
+	@Column(nullable = false)
+	private String currency; 
+	
+	@Transient
+	private String envinronment;
+	
+	public Book () {
+		
+	}
+
+	public Book(Long id, String author, Date launchDate, Double price, String title, String currency,
+			String envinronment) {
+		super();
+		this.author = author;
+		this.launchDate = launchDate;
+		this.price = price;
+		this.title = title;
+		this.currency = currency;
+		this.envinronment = envinronment;
+	}
+	
+	
+}

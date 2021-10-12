@@ -1,0 +1,16 @@
+package br.com.carv.gateway.configuration;
+
+import java.util.List;
+
+import org.springdoc.core.GroupedOpenApi;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class OpenApiConfiguration {
+	
+	public List<GroupedOpenApi> apis() {
+		return new ArrayList<>();
+	}
+	
+
+}

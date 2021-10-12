@@ -1,0 +1,23 @@
+package br.com.carv.book.controller;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.core.env.Environment;
+
+import br.com.carv.book.model.Book;
+
+@RestController
+@RequestMapping("book-service")
+public class BookController {
+
+	@Autowired
+	public Environment environment;
+	
+	@RequestMapping(method = RequestMethod.GET, value = "/{id}/{currency}")
+	public Book findBook(@PathVariable("id") Long id, @PathVariable("currency") String currency) {
+
+		return null;
+	}
+}
